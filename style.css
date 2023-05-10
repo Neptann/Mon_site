@@ -152,7 +152,7 @@ li {
     width: 100%;
 }
 
-/* .subjections {
+.subjections {
     position: absolute;
     left: 10px;
     top: 125px;
@@ -160,4 +160,8 @@ li {
 
 .subjections li {
     color: white;
-} */
+}
+
+#bouton_icone {
+    font: 7em sans-serif;
+}

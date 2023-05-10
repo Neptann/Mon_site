@@ -39,20 +39,37 @@ window.addEventListener("load", function() {
 
 // Kata n°3 : Créer une to do list.
 
-// const suggereUnJeu = document.getElementById("insertion_jeu");
-// const boutonAjouter = document.getElementById("bouton_ajouter");
-// const listeSubjections = document.getElementById("liste_subjections");
+const suggereUnJeu = document.getElementById("insertion_jeu");
+const boutonAjouter = document.getElementById("bouton_ajouter");
+const listeSubjections = document.getElementById("liste_subjections");
 
-// boutonAjouter.addEventListener('click', function() {
-//     const jeu = suggereUnJeu.value;
+boutonAjouter.addEventListener('click', function() {
+    const jeu = suggereUnJeu.value;
 
-//     if (jeu) {
-//         const nomDuJeu = document.createElement("li");
-//         nomDuJeu.innerText = jeu;
-//         listeSubjections.appendChild(nomDuJeu);
-//         // Cette ligne permet de vider le champ d'écriture une fois le jeu ajoutait à la liste.
-//         suggereUnJeu.value = "";
-//     } else {
-//         alert("Entrez le nom d'un jeu");
-//     }
-// });
+    if (jeu) {
+        const nomDuJeu = document.createElement("li");
+        nomDuJeu.innerText = jeu;
+        listeSubjections.appendChild(nomDuJeu);
+        // Cette ligne permet de vider le champ d'écriture une fois le jeu ajoutait à la liste.
+        suggereUnJeu.value = "";
+    } else {
+        alert("Entrez le nom d'un jeu");
+    }
+});
+
+// Kata n°4 : Alterner deux émojis.
+
+const boutonIcone = document.getElementById("bouton_icone");
+const emoji = document.getElementById("icone");
+const emojiUn = "🙈";
+const emojiDeux = "🙉";
+
+emoji.textContent = emojiUn;
+
+boutonIcone.addEventListener('click', function() {
+    if (emoji.textContent === emojiUn) {
+        emoji.textContent = emojiDeux;
+    } else {
+        emoji.textContent = emojiUn;
+    }
+})
